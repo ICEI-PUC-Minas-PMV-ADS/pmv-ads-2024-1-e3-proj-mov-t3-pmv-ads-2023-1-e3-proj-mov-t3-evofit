@@ -14,8 +14,8 @@ EvoFit é uma aplicação móvel para auxiliar e monitorar a evolução dos usu�
 * Bruno de Lima e Souza
 * Guilherme Germano Marroco
 * João Paulo De Freitas Teixeira Leite
-* Luilson De Jesus Brandão
-* Leonardo Rodrigues Barbosa Maia  
+* Leonardo Rodrigues Barbosa Maia 
+* Luilson De Jesus Brandão  
 
 ## Orientador
 
