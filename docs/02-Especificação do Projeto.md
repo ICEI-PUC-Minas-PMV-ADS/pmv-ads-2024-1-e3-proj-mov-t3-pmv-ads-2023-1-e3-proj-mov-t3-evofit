@@ -29,7 +29,42 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Pedro, o iniciante motivado | Quero ter acesso gratuito a fichas de exercícios pré-montadas para iniciantes. | Para começar minha jornada fitness com orientação adequada. Porque recentemente decidi melhorar minha saúde e condicionamento físico, mas não tenho muita experiência com exercícios. |
 |Luíza, a entusiasta do fitness|Desejo personalizar minhas próprias fichas de treino.| Para continuar desafiando meus limites e melhorar meu desempenho. Porque frequento a academia regularmente há anos e gosto de ter controle sobre meus treinos para alcançar meus objetivos de fitness.|
 
+## Requisitos
 
+### Requisitos Funcionais
+
+|ID    | Descrição do Requisito  | Prioridade |
+|------|-----------------------------------------|----|
+|RF-01| O aplicativo deve permitir que os usuários visualizem sua rotina de exercícios na página inicial.| Alta | 
+|RF-02| O aplicativo deve exibir imagens ilustrativas para cada exercício listado na rotina do usuário.  | Média |
+|RF-03| O aplicativo deve possibilitar a visualização detalhada de cada exercício, incluindo instruções e dicas de execução.  | Média |
+|RF-04| O aplicativo deve oferecer opções para os usuários personalizarem suas rotinas de treino de acordo com suas preferências.  | Média |
+|RF-05| O aplicativo deve possibilitar que os usuários salvem seus exercícios favoritos para fácil acesso posterior.  | Alta |
+|RF-06| O aplicativo deve permitir que os usuários compartilhem suas conquistas e progresso em redes sociais.| Média |
+|RF-07| O aplicativo deve oferecer uma seção para os usuários verificarem seus exercícios salvos. | Baixa |
+|RF-08| O aplicativo deve indicar a assiduidade aos treinos.   | Alta|
+|RF-09| O aplicativo deve fornecer vídeos demonstrativos dos exercícios   | Alta |
+|RF-10| O aplicativo deve gerar um relatório de evolução do usuário. | Alta |
+|RF-11| O aplicativo deve ser capaz de registrar fotografias da evolução física dos usuários.   | Média |
+
+### Requisitos não Funcionais
+
+|ID     | Descrição do Requisito  |Prioridade |
+|-------|-------------------------|----|
+|RNF-01| O aplicativo EvoFit deve ser hospedado nas plataformas de download de dispositivos móveis.|Alta| 
+|RNF-02| O aplicativo EvoFit deve ser responsivo, proporcionando uma experiência de usuário adequada em dispositivos móveis. |  Alta | 
+|RNF-03| O aplicativo EvoFit deve apresentar uma boa legibilidade e contraste para garantir a acessibilidade a todos os usuários.  |  Média | 
+|RNF-04| O aplicativo EvoFit deve ser compatível com os principais empresas de aparelhos móveis. |  Alta | 
+
+## Restrições
+
+O projeto está restrito pelos itens apresentados na tabela a seguir.
+
+|ID| Restrição                                             |
+|--|-------------------------------------------------------|
+|RE-01| O projeto EvoFit deve ser concluído até o final do semestre letivo, não podendo ultrapassar a data estabelecida pela PUC Minas. |
+|RE-02| Baixo número de desenvolvedores envolvidos no projeto.|
+|RE-03| A equipe não pode subcontratar o desenvolvimento do trabalho. |
 
 ## Modelagem do Processo de Negócio 
 
@@ -62,53 +97,6 @@ Usar o seguinte modelo:
 ![Indicadores de Desempenho](img/02-indic-desemp.png)
 Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
 
-## Requisitos
-
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
-
-### Requisitos Funcionais
-
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
-
-### Requisitos não Funcionais
-
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-
-## Restrições
-
-O projeto está restrito pelos itens apresentados na tabela a seguir.
-
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Casos de Uso
 
