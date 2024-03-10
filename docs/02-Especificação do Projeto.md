@@ -66,6 +66,33 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |RE-02| Baixo número de desenvolvedores envolvidos no projeto.|
 |RE-03| A equipe não pode subcontratar o desenvolvimento do trabalho. |
 
+## Matriz de rastreabilidade de dependência entre requisitos.
+
+|Requisito | Depende de  | Tipo de dependência |
+|------|-----------------------------------------|----|
+|RF-01| RF-05| Deve ser implementado após | 
+|RF-02| RF-05| Deve ser implementado após | 
+|RF-03| -| - | 
+|RF-04| -| - | 
+|RF-05|RF-04| Deve ser implementado após | 
+|RF-07| RF-05| Deve ser implementado após | 
+|RF-08| RF-05| Deve ser implementado após | 
+|RF-09|-| - | 
+|RF-10| RF-11| Deve ser implementado após | 
+|RF-11| -| - | 
+
+**Observações:**
+
+- A matriz indica que os requisitos RF-01, RF-02, RF-07 e RF-08 dependem do requisito RF-05. Isso significa que esses requisitos só podem ser implementados após o requisito RF-05 ter sido implementado.
+- O requisito RF-06 depende do requisito RF-10. Isso significa que o requisito RF-06 só pode ser implementado após o requisito RF-10 ter sido implementado.
+- Os requisitos RF-03 e RF-09 não possuem dependências com outros requisitos.
+
+**Recomendações:**
+
+- É importante manter a matriz de rastreabilidade de dependência atualizada à medida que os requisitos do projeto mudam.
+- A matriz pode ser utilizada para identificar os requisitos que serão afetados por uma mudança em outro requisito.
+
+
 ## Modelagem do Processo de Negócio 
 
 ### Análise da Situação Atual
