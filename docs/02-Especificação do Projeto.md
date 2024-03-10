@@ -91,6 +91,10 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 - É importante manter a matriz de rastreabilidade de dependência atualizada à medida que os requisitos do projeto mudam.
 - A matriz pode ser utilizada para identificar os requisitos que serão afetados por uma mudança em outro requisito.
+- Os requisitos serão ordenados de acordo com a matriz de rastreabilidade.
+
+- **Ferramentas utilizadas:**
+- Trello, Google Docs, GitHub, Teams e WhatsApp. Temos em mente também a utilização das ferramentas Helix RM, e Visual Requirements Express, caso necessário.
 
 
 ## Modelagem do Processo de Negócio 
