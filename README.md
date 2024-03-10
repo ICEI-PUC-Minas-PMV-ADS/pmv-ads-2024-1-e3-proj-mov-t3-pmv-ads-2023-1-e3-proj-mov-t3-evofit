@@ -1,27 +1,29 @@
-# TÍTULO DO PROJETO
+# EvoFit
 
-`CURSO`
+`Tecnologia em Análise e Desenv. de Sistemas`
 
-`DISCIPLINA`
+`Desenvolvimento de Aplicações Móveis`
 
-`SEMESTRE`
+`Eixo 3`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+EvoFit é uma aplicação móvel para auxiliar e monitorar a evolução dos usuários na prática de musculação. Nosso objetivo é promover a saúde por meio da prática de exercícios físicos e possibilitar a inclusão por meio da disponibilidade de orientações de forma gratuita em nosso app.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Amanda Santos Souza Brescia
+* Bruno de Lima e Souza
+* Guilherme Germano Marroco
+* João Paulo De Freitas Teixeira Leite
+* Luilson De Jesus Brandão
+* Leonardo Rodrigues Barbosa Maia  
 
 ## Orientador
 
-* Nome completo do professor 1
+* Harison Herman Silva
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Assim que a primeira versão do sistema estiver disponível, complementaremos com as instruções de utilização. (Descreva como instalar eventuais dependências e como executar a aplicação.)
 
 # Documentação
 
