@@ -118,7 +118,7 @@ Tela 10 - Alterar dados pessoais
 
 Se o usuário desejar alterar algum dado inserido, ele será redirecionado para a tela de Cadastro ao clicar em "Alterar dados pessoais", onde poderá acessar todas as informações inseridas, incluindo aquelas que foram ou não preenchidas anteriormente.
 
-<img src ="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-evofit/blob/main/docs/img/Projeto%20de%20Interface/tela%203.png">
+<img src ="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-evofit/blob/main/docs/img/Projeto%20de%20Interface/tela%2013.png">
 
 Figura 14 - tela 3
 
