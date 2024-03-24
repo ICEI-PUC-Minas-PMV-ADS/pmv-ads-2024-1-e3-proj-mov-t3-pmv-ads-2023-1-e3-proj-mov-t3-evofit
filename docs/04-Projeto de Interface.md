@@ -13,7 +13,7 @@ Figura 3 - Diagrama de fluxo
 
 ## Wireframe Interativo
 
-Conforme o diagrama de fluxo do projeto, apresentado no item anterior, as telas do sistema são apresentadas em detalhes nos itens que se seguem. Para visualizar o wireframe interativo, acesse o ambiente <a href="https://marvelapp.com/prototype/f10e001">MarvelApp do projeto</a>.
+Conforme o diagrama de fluxo do projeto, apresentado no item anterior, as telas do sistema são apresentadas em detalhes nos itens que se seguem. Para visualizar o wireframe interativo, acesse o ambiente <a href="https://marvelapp.com/prototype/10addg24">MarvelApp do projeto EvoFit</a>.
 
 <img src ="[https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-evofit/blob/main/docs/img/Projeto%20de%20Interface/Diagrama%20de%20Fluxo%20-%20EvoFit.png">
 
