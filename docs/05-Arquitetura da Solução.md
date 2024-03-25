@@ -30,7 +30,7 @@ Esse é o diagrama de classes da aplicação EvoFit conforme concebido incialmen
 
 <img src ="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-evofit/blob/ee2ec096ae3b31ce053d388976399362fdeb5604/docs/img/diagramaDeClassesEvoFit.png">
 
-### Explicação detalhada do diagrama de classess - atributos e métodos - da aplicação evofit
+### Explicação detalhada do diagrama de classess - atributos e métodos:
 
 #### Classe Usuário:
 
@@ -109,10 +109,38 @@ Esse é o diagrama de classes da aplicação EvoFit conforme concebido incialmen
 - carga: Carga utilizada no exercício.
 - observações: Observações sobre o exercício.
 
-##### Métodos:
+###Métodos:
 - criar(): Cria um novo registro de treino.
 - editar(): Edita os dados de um registro de treino existente.
 - excluir(): Exclui um registro de treino do sistema.
+
+
+### Explicação dos Relacionamentos no Diagrama de Classes
+
+O diagrama de classes da aplicação EvoFit apresenta os seguintes relacionamentos entre as classes:
+
+#### 1. Usuário:
+
+- Possui vários treinos: Um usuário pode ter vários treinos associados a ele. Esse relacionamento é do tipo um para muitos (1:N), pois um usuário pode ter diversos treinos, mas cada treino só pode estar associado a um único usuário.
+- Registra vários treinos: Um usuário pode registrar vários treinos ao longo do tempo. Esse relacionamento também é do tipo um para muitos (1:N), pois um usuário pode registrar diversos treinos, mas cada registro de treino só pode estar associado a um único usuário.
+- Tem um progresso: Cada usuário tem um único registro de progresso associado a ele. Esse relacionamento é do tipo um para um (1:1), pois cada usuário só pode ter um único registro de progresso e vice-versa.
+
+#### 2. Treino:
+
+- Pertence a um usuário: Cada treino está associado a um único usuário. Esse relacionamento é do tipo muitos para um (N:1), pois um treino só pode estar associado a um único usuário, mas um usuário pode ter diversos treinos.
+- Possui vários exercícios: Um treino pode ter vários exercícios associados a ele. Esse relacionamento é do tipo muitos para muitos (N:N), pois um treino pode ter diversos exercícios e um exercício pode estar presente em diversos treinos.
+
+#### 3. Exercicio:
+
+- Pertence a um ou mais treinos: Um exercício pode estar presente em um ou mais treinos. Esse relacionamento é do tipo muitos para muitos (N:N), pois um exercício pode estar presente em diversos treinos e um treino pode ter diversos exercícios.
+
+#### 4. RegistroTreino:
+
+- Pertence a um treino: Cada registro de treino está associado a um único treino. Esse relacionamento é do tipo muitos para um (N:1), pois um registro de treino só pode estar associado a um único treino, mas um treino pode ter diversos registros de treino.
+
+#### 5. Progresso:
+
+- Pertence a um usuário: Cada registro de progresso está associado a um único usuário. Esse relacionamento é do tipo um para um (1:1), pois cada registro de progresso só pode estar associado a um único usuário e vice-versa.
 
 ## Modelo ER
 
