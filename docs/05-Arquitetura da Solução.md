@@ -26,12 +26,93 @@ A arquitetura da EvoFit é composta por três camadas principais:
 
 ## Diagrama de Classes
 
-O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
+Esse é o diagrama de classes da aplicação EvoFit conforme concebido incialmente. Está sujeito a alterações para adequação às necessidades dos stakeholders.
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Classes”.
+<img src ="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-evofit/blob/ee2ec096ae3b31ce053d388976399362fdeb5604/docs/img/diagramaDeClassesEvoFit.png">
 
-> - [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
-> - [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
+### Explicação detalhada do diagrama de classess - atributos e métodos - da aplicação evofit
+
+#### Classe Usuário:
+
+##### Atributos:
+- id: Identificador único do usuário.
+- nome: Nome completo do usuário.
+- email: Endereço de email do usuário.
+- senha: Senha do usuário para autenticação.
+- dataNascimento: Data de nascimento do usuário.
+- sexo: Sexo do usuário (masculino, feminino ou outro).
+- altura: Altura do usuário em metros.
+- peso: Peso do usuário em quilogramas.
+- nívelAtividade: Nível de atividade física do usuário (sedentário, moderado ou ativo).
+- objetivo: Objetivo do usuário com a prática de musculação (ganhar massa muscular, perder peso, etc.).
+- fotoPerfil: Foto de perfil do usuário.
+
+##### Métodos:
+- cadastrar(): Cria um novo usuário no sistema.
+- editar(): Edita os dados de um usuário existente.
+- excluir(): Exclui um usuário do sistema.
+- autenticar(): Autentica o usuário no sistema com base em seu email e senha.
+- getTreinos(): Obtém todos os treinos do usuário.
+- getExercicios(): Obtém todos os exercícios do usuário.
+- registrarTreino(): Registra um novo treino para o usuário.
+- acompanharProgresso(): Acompanha o progresso do usuário ao longo do tempo.
+
+#### Classe Treino:
+
+##### Atributos:
+- id: Identificador único do treino.
+- nome: Nome do treino.
+- data: Data em que o treino foi realizado.
+- tipo: Tipo de treino (treino de força, treino de hipertrofia, etc.).
+- objetivo: Objetivo do treino (ganhar massa muscular, perder peso, etc.).
+- nível: Nível de dificuldade do treino (iniciante, intermediário ou avançado).
+- duração: Duração do treino em minutos.
+- listaExercicios: Lista de exercícios que compõem o treino.
+
+##### Métodos:
+- criar(): Cria um novo treino.
+- editar(): Edita os dados de um treino existente.
+- excluir(): Exclui um treino do sistema.
+- iniciar(): Inicia a execução do treino.
+- finalizar(): Finaliza a execução do treino.
+- getExercicios(): Obtém todos os exercícios do treino.
+- registrarTreino(): Registra o treino no sistema.
+
+#### Classe Exercicio:
+
+##### Atributos:
+- id: Identificador único do exercício.
+- nome: Nome do exercício.
+- descrição: Descrição detalhada do exercício.
+- grupoMuscular: Grupo muscular que o exercício trabalha.
+- tipo: Tipo de exercício (isolamento, composto, aeróbico, etc.).
+- séries: Número de séries do exercício.
+- repetições: Número de repetições do exercício em cada série.
+- carga: Carga utilizada no exercício (peso, resistência, etc.).
+- imagem: Imagem ilustrativa do exercício.
+
+##### Métodos:
+- criar(): Cria um novo exercício.
+- editar(): Edita os dados de um exercício existente.
+- excluir(): Exclui um exercício do sistema.
+- adicionarTreino(): Adiciona o exercício a um treino.
+- removerTreino(): Remove o exercício de um treino.
+
+#### Classe RegistroTreino:
+
+##### Atributos:
+- id: Identificador único do registro de treino.
+- treinoId: Identificador do treino ao qual o registro pertence.
+- data: Data em que o registro foi realizado.
+- séries: Número de séries realizadas do exercício.
+- repetições: Número de repetições realizadas do exercício em cada série.
+- carga: Carga utilizada no exercício.
+- observações: Observações sobre o exercício.
+
+##### Métodos:
+- criar(): Cria um novo registro de treino.
+- editar(): Edita os dados de um registro de treino existente.
+- excluir(): Exclui um registro de treino do sistema.
 
 ## Modelo ER
 
