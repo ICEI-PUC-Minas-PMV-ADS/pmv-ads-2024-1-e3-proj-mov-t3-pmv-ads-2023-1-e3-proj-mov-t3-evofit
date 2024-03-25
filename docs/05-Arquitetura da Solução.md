@@ -1,10 +1,28 @@
 # Arquitetura da Solução
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
+A arquitetura da EvoFit é composta por três camadas principais:
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+### 1. Camada de Apresentação (Front-end):
 
-![Arquitetura da Solução](img/02-mob-arch.png)
+- Desenvolvida em React Native, utilizando componentes reutilizáveis para garantir uma interface intuitiva e consistente em diferentes plataformas (Android e iOS).
+- Arquitetura de componentes modular para facilitar a manutenção e o desenvolvimento futuro.
+- Estilos personalizados para garantir uma identidade visual única e profissional.
+- Integração com bibliotecas de terceiros para funcionalidades específicas, como geolocalização e notificações push.
+
+### 2. Camada de Lógica (Back-end):
+
+- Servidor Node.js com API RESTful para comunicação com o front-end.
+- Banco de dados NoSQL (Firebase Cloud Firestore) para armazenar dados de forma escalável e segura.
+- Autenticação e autorização de usuários via Firebase Authentication.
+- Implementação de lógica de negócio para processamento de dados e regras de validação.
+- Armazenamento de imagens e vídeos na nuvem (Firebase Storage).
+
+### 3. Camada de Infraestrutura:
+
+- Hospedagem da aplicação front-end na Expo (serviço de nuvem para React Native).
+- Hospedagem do back-end na Google Cloud Platform (GCP).
+- Monitoramento de desempenho e logs de erros para garantir a estabilidade da aplicação.
+- Segurança da informação e proteção de dados dos usuários.
 
 ## Diagrama de Classes
 
