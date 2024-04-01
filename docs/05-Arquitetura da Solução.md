@@ -181,15 +181,78 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 
 ## Qualidade de Software
 
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+### Diretivas para Verificação da Qualidade do Software EvoFit com base na norma ISO/IEC 25010:2011:
 
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+**1. Funcionalidade:**
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
+* **Verificação:**
+    * Todos os requisitos funcionais do sistema EvoFit devem ser verificados e validados.
+    * Testes de unidade, integração e sistema devem ser realizados para garantir que o software atende aos requisitos especificados.
+    * Casos de teste devem ser criados para cada funcionalidade do sistema.
+* **Critérios de Aceitação:**
+    * O software deve executar todas as funcionalidades especificadas nos requisitos.
+    * O software deve funcionar de acordo com as expectativas dos usuários.
+    * Os resultados das funcionalidades devem ser precisos e confiáveis.
 
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
+**2. Confiabilidade:**
+
+* **Verificação:**
+    * O software EvoFit deve ser testado para garantir sua confiabilidade e robustez.
+    * Testes de carga, estresse e recuperação de falhas devem ser realizados para garantir que o software funcione corretamente em diferentes condições.
+    * O software deve ser monitorado para identificar e corrigir falhas.
+* **Critérios de Aceitação:**
+    * O software deve ser capaz de realizar múltiplas transações sem falhas.
+    * O software deve se recuperar de falhas de hardware e software sem perda de dados.
+    * O software deve ser capaz de funcionar por longos períodos sem interrupções.
+
+**3. Usabilidade:**
+
+* **Verificação:**
+    * O software EvoFit deve ser testado por usuários para garantir sua usabilidade e facilidade de uso.
+    * Testes de usabilidade com usuários reais devem ser realizados para identificar e corrigir problemas de usabilidade.
+    * A interface do usuário deve ser intuitiva e fácil de usar.
+* **Critérios de Aceitação:**
+    * O software deve ser fácil de aprender e usar.
+    * As tarefas do usuário devem ser concluídas de forma eficiente.
+    * O software deve ser amigável e agradável de usar.
+
+**4. Eficiência:**
+
+* **Verificação:**
+    * O software EvoFit deve ser testado para garantir sua eficiência e desempenho.
+    * Testes de desempenho devem ser realizados para identificar e corrigir gargalos de desempenho.
+    * O software deve utilizar os recursos do sistema de forma eficiente.
+* **Critérios de Aceitação:**
+    * O software deve responder rapidamente às solicitações dos usuários.
+    * O software deve ser capaz de realizar múltiplas transações sem afetar o desempenho.
+    * O software deve utilizar os recursos do sistema de forma eficiente.
+
+**5. Manutenibilidade:**
+
+* **Verificação:**
+    * O código-fonte do software EvoFit deve ser revisado para garantir sua manutenibilidade.
+    * O código deve ser bem documentado, legível e modular.
+    * O software deve ser fácil de modificar e atualizar.
+* **Critérios de Aceitação:**
+    * O código-fonte deve ser bem documentado e fácil de entender.
+    * O software deve ser modular e fácil de modificar.
+    * O software deve ser fácil de testar e depurar.
+
+**6. Portabilidade:**
+
+* **Verificação:**
+    * O software EvoFit deve ser testado para garantir sua portabilidade em ambientes Android e iOs.
+* **Critérios de Aceitação:**
+    * O software deve ser capaz de funcionar em ambientes Android e iOs sem modificações funcionais.
+    * O software deve ser capaz de se adaptar às diferentes configurações de hardware e software.
+
+**7. Segurança:**
+
+* **Verificação:**
+    * O software EvoFit deve ser testado para garantir sua segurança contra ataques e vulnerabilidades.    
+    * O software deve implementar medidas de segurança para proteger os dados dos usuários.
+* **Critérios de Aceitação:**
+    * O software deve proteger os dados dos usuários contra acesso não autorizado.
+    * O software deve implementar medidas de segurança para garantir a confidencialidade, integridade e disponibilidade dos dados.    
+
+
