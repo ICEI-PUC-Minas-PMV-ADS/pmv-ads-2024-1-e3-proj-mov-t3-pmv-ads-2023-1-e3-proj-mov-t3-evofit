@@ -3,7 +3,19 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+No desenvolvimento do aplicativo EvoFit, cada aluno é responsável por uma parte específica do trabalho, escolhida de acordo com afinidades individuais e habilidades. A colaboração e suporte entre os membros são fundamentais, sendo que sempre que um colega precisa de ajuda, todos se prontificam a oferecer suporte, promovendo assim um ambiente de trabalho colaborativo e produtivo.
+
+Para gerenciar nossas atividades e promover uma comunicação eficaz, utilizamos duas plataformas principais: Teams e WhatsApp. Ambas as ferramentas são empregadas para agendamento de reuniões, discussões sobre o projeto, troca de arquivos e informações relevantes para o desenvolvimento do trabalho. O Teams é especialmente útil para reuniões síncronas, decidir etapas do projeto, quem será responsável por cada item e deixamos gravadas para aqueles que não puderam participar, enquanto o WhatsApp permite uma comunicação mais ágil entre os membros do grupo.
+
+Além disso, para o desenvolvimento do projeto, fazemos uso do MarvelApp para criar wireframes do aplicativo que estamos desenvolvendo. Esta ferramenta nos permite visualizar e iterar sobre o design do aplicativo antes de iniciar a fase de implementação, garantindo assim uma melhor compreensão das necessidades dos usuários e uma interface mais intuitiva e eficiente.
+
+No que diz respeito ao desenvolvimento do código, optamos por utilizar o Expo CLI, uma ferramenta que simplifica o processo de criação de aplicativos móveis ao oferecer um conjunto de ferramentas e bibliotecas que facilitam o desenvolvimento e testes. Além disso, para testar o aplicativo em tempo real em dispositivos móveis, utilizamos o Expo Go, o que nos permite verificar a funcionalidade e usabilidade do aplicativo em diferentes plataformas e dispositivos.
+
+Em termos de gestão de código fonte, optamos por adotar um repositório compartilhado no GitHub, onde cada membro do grupo pode contribuir com seu código de forma organizada e controlada. Utilizamos branches para desenvolver funcionalidades isoladamente e realizamos revisões de código entre os membros do grupo para garantir a qualidade e consistência do código fonte.
+
+No que diz respeito ao processo de gestão de times, adotamos uma abordagem ágil, com reuniões frequentes para revisão do progresso, identificação de obstáculos e planejamento das próximas etapas. Utilizamos metodologias como o Scrum e KanBan para organizar nossas tarefas e garantir uma distribuição equitativa das atividades entre os membros do grupo. Além disso, promovemos uma cultura de feedback contínuo, incentivando a comunicação aberta e transparente entre os membros do grupo.
+
+Em resumo, nossa metodologia de trabalho se baseia em uma abordagem colaborativa e ágil, onde cada membro do grupo contribui com suas habilidades e conhecimentos para alcançar os objetivos do projeto. Através do uso de ferramentas adequadas e uma comunicação eficaz, buscamos garantir o sucesso e a qualidade do nosso trabalho.
 
 ## Relação de Ambientes de Trabalho
 
@@ -65,7 +77,7 @@ As ferramentas empregadas no projeto são:
 
 - Editor de código: Expo CLI
 - Ferramentas de teste de código: Expo Go
-- Ferramentas de comunicação: Trello, Whatsapp
+- Ferramentas de comunicação: Trello, Whatsapp, Teams, Google Docs
 - Ferramentas de desenho de tela (_wireframing_) : MarvelApp
 
 
