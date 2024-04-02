@@ -20,7 +20,7 @@ Em resumo, nossa metodologia de trabalho se baseia em uma abordagem colaborativa
 ## Relação de Ambientes de Trabalho
 
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito deverá ser apresentada em uma tabela que especifica que detalha Ambiente, Plataforma e Link de Acesso. 
-Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
+
 
 ## Controle de Versão
 
