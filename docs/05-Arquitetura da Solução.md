@@ -158,9 +158,93 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Rel
 
 > - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
 
-## Modelo Físico
+## Modelo Físico do Banco de Dados EvoFit
+Arquivo: banco.sql
 
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+Conexão:
+```sql
+SQL
+-- Conecte-se ao banco de dados PostgreSQL
+-- Adapte as informações de acordo com seu ambiente
+CREATE DATABASE evo_fit;
+\connect evo_fit postgres
+
+-- Altere o usuário e senha para acesso ao banco de dados
+ALTER USER postgres WITH PASSWORD 'senha_segura';
+```
+
+Tabelas:
+
+1. Usuários:
+```sql
+SQL
+CREATE TABLE usuarios (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    data_nascimento DATE NOT NULL,
+    sexo VARCHAR(1) NOT NULL,
+    altura DECIMAL(5,2) NOT NULL,
+    peso DECIMAL(5,2) NOT NULL,
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+```
+
+2. Treinos:
+```sql
+SQL
+CREATE TABLE treinos (
+    id SERIAL PRIMARY KEY,
+    usuario_id INTEGER REFERENCES usuarios(id) NOT NULL,
+    tipo VARCHAR(255) NOT NULL,
+    nome VARCHAR(255) NOT NULL,
+    objetivo VARCHAR(255) NOT NULL,
+    duracao INTEGER NOT NULL,
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+```
+
+3. Exercícios:
+```sql
+SQL
+CREATE TABLE exercicios (
+    id SERIAL PRIMARY KEY,
+    treino_id INTEGER REFERENCES treinos(id) NOT NULL,
+    nome VARCHAR(255) NOT NULL,
+    series INTEGER NOT NULL,
+    repeticoes INTEGER NOT NULL,
+    carga DECIMAL(5,2) NOT NULL,
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+```
+4. Registros de Treino:
+```sql
+SQL
+CREATE TABLE registros_treino (
+    id SERIAL PRIMARY KEY,
+    treino_id INTEGER REFERENCES treinos(id) NOT NULL,
+    data DATE NOT NULL,
+    series INTEGER NOT NULL,
+    repeticoes INTEGER NOT NULL,
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+```
+
+5. Configurações:
+```sql
+SQL
+CREATE TABLE configuracoes (
+    id SERIAL PRIMARY KEY,
+    chave VARCHAR(255) UNIQUE NOT NULL,
+    valor VARCHAR(255) NOT NULL,
+    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+##### Essas são previsões que podem não constar no código final. Estamos elaborando esse documento em conjunto e no decorrer do desenvolvimento do projeto e, nos atentando aos prazos da PUC Minas, faremos todas as atualizações necessárias.
+
 
 ## Tecnologias utilizadas - EvoFit
 * **Linguagens de Programação:**
