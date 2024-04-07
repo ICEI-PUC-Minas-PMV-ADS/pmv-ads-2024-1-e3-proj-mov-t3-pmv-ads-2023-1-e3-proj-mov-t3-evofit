@@ -109,7 +109,7 @@ Esse é o diagrama de classes da aplicação EvoFit conforme concebido incialmen
 - carga: Carga utilizada no exercício.
 - observações: Observações sobre o exercício.
 
-###Métodos:
+### Métodos:
 - criar(): Cria um novo registro de treino.
 - editar(): Edita os dados de um registro de treino existente.
 - excluir(): Exclui um registro de treino do sistema.
@@ -168,16 +168,75 @@ Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, 
 
 Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
-## Hospedagem
+## Hospedagem e Lançamento da Aplicação EvoFit
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
+- Este documento tem como objetivo descrever o processo de hospedagem e lançamento da aplicação EvoFit, incluindo a infraestrutura necessária, os serviços de nuvem a serem utilizados e as etapas de lançamento.
 
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+**Considerações:**
+
+    * A aplicação EvoFit é um aplicativo móvel desenvolvido com tecnologias web responsivas.
+    * A aplicação será hospedada em um serviço de nuvem que ofereça escalabilidade, confiabilidade e segurança.
+    * O código-fonte da aplicação será versionado e gerenciado em um repositório Git.
+    * A equipe de desenvolvimento utilizará ferramentas de programação colaborativa para trabalhar no projeto.
+
+**Infraestrutura:**
+
+* **A aplicação EvoFit será hospedada na Heroku, que oferece uma plataforma como serviço (PaaS) para desenvolvimento e deployment de aplicações web. A Heroku oferece diversos recursos que serão utilizados para a hospedagem da aplicação EvoFit:**
+
+    * Dyno: Contêiner para execução da aplicação.
+    * Database: Banco de dados PostgreSQL para armazenamento de dados da aplicação.
+    * Redis: Armazenamento em cache para melhorar o desempenho da aplicação.
+    * Add-ons: Ferramentas adicionais para monitoramento, segurança e logs da aplicação.
+    * Serviços de Nuvem:
+
+* **A Heroku oferece diversos serviços de nuvem que serão utilizados para o desenvolvimento e operação da aplicação EvoFit:**
+
+    * Heroku CLI: Ferramenta de linha de comando para gerenciamento da aplicação na Heroku.
+    * Heroku Dashboard: Interface web para gerenciamento da aplicação na Heroku.
+    * Heroku Pipelines: Ferramenta para automatizar o processo de deployment da aplicação.
+    * Heroku Monitor: Ferramenta para monitorar o desempenho da aplicação.
+    * Heroku Logplex: Ferramenta para visualizar os logs da aplicação.
+
+**Etapas de Lançamento:**
+
+* **O lançamento da aplicação EvoFit será realizado em etapas para garantir um lançamento suave e minimizar riscos:**
+
+    * Desenvolvimento: Desenvolvimento da aplicação EvoFit, incluindo funcionalidades, interface do usuário e testes.
+    * Lançamento Beta: Lançamento da aplicação para um grupo limitado de usuários para feedback e testes adicionais. Esse grupo será determinado posteriormente.
+    * Lançamento oficial: Lançamento da aplicação para o público em geral.
+    * Programação Colaborativa:
+
+**Programação Colaborativa com VS Code e Github**
+* **Editor de código:**
+
+    * O VS Code é um editor de código leve e versátil que oferece diversas funcionalidades para desenvolvimento em diversas linguagens de programação.
+    * O VS Code pode ser utilizado para editar o código-fonte da aplicação EvoFit, tanto localmente quanto em um repositório remoto no Github.
+    * O VS Code oferece suporte a extensões que podem ser utilizadas para adicionar funcionalidades ao editor, como realce de sintaxe, autocompletar código e depuração.
+
+* **Compartilhamento de projetos e versão de código::**
+
+    * O Github é uma plataforma de hospedagem de código-fonte que permite o compartilhamento de projetos com outros membros da equipe.
+    * O código-fonte da aplicação EvoFit será armazenado em um repositório Git no Github.
+    * O Github oferece diversas ferramentas para o compartilhamento de projetos, como forks, pull requests e issues.
+    * O Git é um sistema de controle de versão que permite o acompanhamento das alterações no código-fonte ao longo do tempo.
+    * O Git permite reverter alterações, comparar diferentes versões do código e mergear alterações de diferentes branches.
+    * O Github oferece integração com o Git, o que facilita o gerenciamento do código-fonte da aplicação EvoFit.
+
+* **Website com GitHub Pages:**
+
+    * Uma das possibilidades é criarmos o website da aplicação EvoFit utilizando o GitHub Pages. O GitHub Pages oferece um serviço gratuito para criação de websites estáticos a partir de repositórios Git.
+
+### Conclusão:
+
+Queremos garantir um ambiente escalável, confiável e seguro para o desenvolvimento e operação da aplicação. O lançamento em etapas permitirá uma constante adequação, minimizando riscos e garantindo o atendimento aos requisitos da PUC Minas. A utilização de ferramentas para programação colaborativa e website como GitHub Pages facilita o desenvolvimento e divulgação da aplicação.
+
+###### Observação: Este documento é apenas um guia geral e pode ser adaptado de acordo com as necessidades específicas do projeto.
+
+
+
+
+
+
 
 ## Qualidade de Software
 
