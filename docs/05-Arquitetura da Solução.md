@@ -162,11 +162,91 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Rel
 
 Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
 
-## Tecnologias Utilizadas
+## Tecnologias utilizadas - EvoFit
+* **Linguagens de Programação:**
+    * JavaScript: Linguagem principal para desenvolvimento da interface do usuário web e mobile com React Native.
+    * Python: Linguagem para desenvolvimento da API e scripts de automação.
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+* **Frameworks e Bibliotecas:**
+    * React Native: Framework JavaScript para criação de interfaces web e mobile responsivas e performantes.
+    * Material UI: Biblioteca de componentes React para interfaces elegantes e consistentes.
+    * TensorFlow: Biblioteca de machine learning para análise de dados e personalização de treinos.
+    * OpenCV: Biblioteca de visão computacional para análise de imagens e vídeos.
+* **Serviços Web e APIs:**
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+    * Heroku: Plataforma de nuvem como serviço (PaaS) para hospedagem da API e do website.
+    * Firebase: Plataforma de backend como serviço (BaaS) para autenticação de usuários, armazenamento de dados em tempo real e integração com outros serviços.
+    * Strava API: API para integração com dados de atividades físicas de outros aplicativos.
+     
+* **IDEs e Ferramentas:**
+    * VS Code: IDE leve e versátil para desenvolvimento em JavaScript e Python.
+    * GitHub Pages: Serviço para criação de websites estáticos a partir de repositórios Git.
+    * Postman: Ferramenta para teste e desenvolvimento de APIs.
+    *Git: Sistema de controle de versão para gerenciamento de código e colaboração.
+
+**Arquitetura do Sistema:**
+* **1. Interface do Usuário:**
+
+Interface web e mobile desenvolvidas com React Native e Material UI.
+Interação com o usuário para registro, login, criação de treinos, acompanhamento de progresso e outras funcionalidades.
+
+* **2. API EvoFit:**
+
+    **API RESTful desenvolvida com Python, Django e Flask, responsável por (esse é o ideal que pesquisamos):**
+    * Gerenciar dados de usuários, treinos, exercícios e progresso.
+    * Processar solicitações da interface do usuário.
+    * Integrar com serviços de terceiros, como Firebase e Strava.
+ 
+* **3. Banco de Dados:**
+    **Banco de dados PostgreSQL armazena:**
+    * Dados de usuários, treinos, exercícios e progresso.
+    * Configurações do sistema.
+      
+* **4. Machine Learning(Acreditamos que esse modelo não será aplicável em tempo hábil para as entregas da PUC, mas é o que propomos no longo prazo para a aplicação):**
+    **Modelos de machine learning em TensorFlow:**
+    * Personalizam treinos de acordo com perfil e objetivos do usuário.
+    * Analisam dados de atividades físicas para fornecer insights e feedback.
+
+* **5. Armazenamento em Nuvem:**
+    **Heroku armazena:**
+    * Código da API.
+    * Banco de dados.
+    * Modelos de machine learning.
+
+* **6. Integração com Strava:**
+    **API Strava permite:**
+    * Importar dados de atividades físicas de outros aplicativos.
+    * Exportar dados de treinos do EvoFit para Strava.
+    
+* **7. Segurança e Autenticação:**
+    **Firebase:**
+    * Autenticação de usuários com e-mail e senha.
+    * Controle de acesso a recursos do sistema.
+
+* **8. Monitoramento e Telemetria:**
+    **Ferramentas de monitoramento acompanham:**
+    * Desempenho do sistema.
+    * Erros e falhas.
+      
+* **9. Testes e Qualidade:**
+    * Testes com usuários de academias garantem a qualidade do código e a funcionalidade do sistema.
+ 
+* **10. Implementação e Manutenção:**
+    * Código versionado no Git para controle de alterações e colaboração.
+    * Implementação em etapas com foco em entregas contínuas e testes frequentes.
+    * 
+* **Benefícios das Tecnologias Escolhidas:**
+    * Escalabilidade: Arquitetura robusta e escalável para atender a um grande número de usuários.
+    * Segurança: Autenticação e controle de acesso garantem a segurança dos dados dos usuários.
+    * Personalização: Machine learning permite personalizar treinos e oferecer uma experiência individualizada.
+    * Integração: Integração com outros aplicativos e serviços aumenta a utilidade do EvoFit.
+    * Facilidade de uso: Interface amigável e intuitiva para facilitar o uso do sistema.
+
+### Conclusão:
+- Nosso objetivo com a combinação dessas tecnologias é garantir que o EvoFit seja uma solução robusta, escalável, segura, amigável e inovadora para o acompanhamento de treinos e saúde.
+
+##### Observação: Esta lista de tecnologias é o que temos como objetivo. Outras tecnologias podem ser utilizadas de acordo com as necessidades específicas do projeto.
+
 
 ## Hospedagem e Lançamento da Aplicação EvoFit
 
