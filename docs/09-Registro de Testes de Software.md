@@ -13,7 +13,8 @@ A documentação de testes de software pode ser facilitada pelo uso de ferrament
 
 #Sistema de gerenciamento de testes                                                                                               
 #Captura de tela                                                                                                                 
-#Gravação de vídeo                                                                                                                  #Notas explicativas
+#Gravação de vídeo                                                                                                                  #Notas explicativas                                                                                                                     
+
 Ao utilizar essas ferramentas e técnicas de documentação de testes de software, a equipe pode garantir que todas as informações relevantes sejam registradas e documentadas de forma adequada. Isso facilita a rastreabilidade, a análise e a resolução de problemas durante o processo de desenvolvimento de software.
 
 
