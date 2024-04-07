@@ -19,7 +19,15 @@ Em resumo, nossa metodologia de trabalho se baseia em uma abordagem colaborativa
 
 ## Relação de Ambientes de Trabalho
 
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito deverá ser apresentada em uma tabela que especifica que detalha Ambiente, Plataforma e Link de Acesso. 
+Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito está representada na tabela a seguir:
+
+| Ambiente  | Plataforma | Link de acesso |
+| ------------- | ------------- | ------------- |
+| Repositório de código fonte  | [Github](https://github.com/)  | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-evofit
+| Documentos do projeto  | [Google Drive](https://drive.google.com)  | |
+| Projeto de Interface e  Wireframes  | [MarvelApp](https://marvelapp.com/)  | (https://marvelapp.com/prototype/10addg24/screen/94215564) |
+| Gerenciamento do Projeto  | [GitHub](https://github.com/)  | https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/930 |
+
 
 
 ## Controle de Versão
@@ -58,10 +66,15 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 ### Divisão de Papéis
 
  A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
-- Scrum Master: Luilson Brandão;
-- Product Owner: Bruno Lima;
-- Equipe de Desenvolvimento: Amanda Brescia, João Paulo de Freitas, Leonardo Maia;
-- Equipe de Design: Guilherme Germano.
+
+| Função  | Nome |
+| ------------- | ------------- |
+| Scrum Master  | Luilson Brandão  |
+| Product Owner  | Bruno Lima  |
+| Desenvolvedor  | Amanda Brescia  |
+| Desenvolvedor  |  João Paulo de Freitas |
+| Desenvolvedor  | Leonardo Maia  |
+| Design | Guilherme Germano  |
 
 
 ### Processo
