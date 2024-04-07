@@ -2,10 +2,6 @@
 
 <span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
 
-Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
-
-## Avaliação
-
 O registro de Testes consiste em registrar e documentar todas as informações relevantes sobre os testes realizados, permitindo que a equipe de desenvolvimento e outras partes interessadas tenham acesso a informações importantes sobre o sistema testado.
 
 A importância de registrar os testes de software está relacionada à rastreabilidade e documentação completa do processo. Ao registrar cada teste realizado, é possível acompanhar o histórico de execução e identificar possíveis falhas ou problemas recorrentes. Além disso, a documentação adequada dos testes permite que os resultados sejam compartilhados e analisados por outras equipes, como desenvolvedores e gerentes de projeto.
