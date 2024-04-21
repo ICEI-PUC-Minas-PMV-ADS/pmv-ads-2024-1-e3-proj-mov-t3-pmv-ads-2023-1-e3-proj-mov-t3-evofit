@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, Alert } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { Appbar } from 'react-native-paper';
+
 import Container from '../components/Container';
 import Header from '../components/Header';
 import Body from '../components/Body';
 import Input from '../components/Input';
-import { useNavigation } from '@react-navigation/native';
-import { Appbar } from 'react-native-paper';
+
 
 const StarterName = () => {
   const navigation = useNavigation();
@@ -13,10 +15,10 @@ const StarterName = () => {
 
   const handleNextAction = () => {
     if (!name) {
-      alert("Você precisa informar seu nome!");
+      Alert.alert("Atenção","Você precisa informar seu nome!");
       return;
     }
-    navigation.navigate('StarterDiasTreino');
+    navigation.navigate('StarterDiasTreino', { nome: name });
   };
 
   return (

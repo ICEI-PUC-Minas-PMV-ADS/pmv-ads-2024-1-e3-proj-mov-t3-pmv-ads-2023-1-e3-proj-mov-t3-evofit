@@ -6,7 +6,7 @@ const Input = (props) => {
   return (
     <TextInput
           style={styles.input}
-          keyboardType='username'
+         
           {...props}
         />
   );

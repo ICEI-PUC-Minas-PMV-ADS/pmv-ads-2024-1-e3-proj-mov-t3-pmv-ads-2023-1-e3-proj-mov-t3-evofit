@@ -1,0 +1,32 @@
+[
+  {
+    "id": "123",
+    "name": "Emagrecimento",
+    "exercises": [
+      {"id": 1, "name": "Flexão de braço", "sets": "3", "reps": "15"},
+      {"id": 2, "name": "Rosca direta", "sets": "3", "reps": "12"},
+      {"id": 3, "name": "Agachamento", "sets": "3", "reps": "12"},
+      {"id": 4, "name": "Corrida leve", "sets": "1", "reps": "20 minutos"}
+    ]
+  },
+  {
+    "id": "456",
+    "name": "Hipertofia Muscular",
+    "exercises": [
+      {"id": 1, "name": "Flexão de braço", "sets": "4", "reps": "12"},
+      {"id": 2, "name": "Elevação lateral", "sets": "4", "reps": "15"},
+      {"id": 3, "name": "Agachamento", "sets": "4", "reps": "12"},
+      {"id": 4, "name": "Corrida", "sets": "1", "reps": "20 minutos"}
+    ]
+  },
+  {
+    "id": "789",
+    "name": "Definição Muscular",
+    "exercises": [
+      {"id": 1, "name": "Supino reto", "sets": "4", "reps": "8-10"},
+      {"id": 2, "name": "Barra fixa", "sets": "4", "reps": "8-10"},
+      {"id": 3, "name": "Agachamento livre", "sets": "4", "reps": "8-10"},
+      {"id": 4, "name": "Escada", "sets": "1", "reps": "20 minutos"}
+    ]
+  }
+]
