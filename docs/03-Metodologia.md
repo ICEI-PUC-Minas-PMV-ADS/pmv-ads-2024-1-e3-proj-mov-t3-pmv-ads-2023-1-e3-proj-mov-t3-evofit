@@ -74,7 +74,7 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 O grupo está utilizando o recurso de gerenciamento de projeto oferecido pelo GitHub, pois permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
 
-![gestao de trabalho ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-evofit/assets/121675519/5abc9e61-1c5c-4da7-82a0-4a9edac758dc)
+![gestao de trabalho ](https://raw.githubusercontent.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e3-proj-mov-t3-pmv-ads-2023-1-e3-proj-mov-t3-evofit/05d7b80b8596fd570565e36d279038126a5250c2/docs/img/Projeto%20de%20Interface/Gestao%20de%20Trabalho%20-%20Etapa%203.PNG)
 
 
 ### Ferramentas
