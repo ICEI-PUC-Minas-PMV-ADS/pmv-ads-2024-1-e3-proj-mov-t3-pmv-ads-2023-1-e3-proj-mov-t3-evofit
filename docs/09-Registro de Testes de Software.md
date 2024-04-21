@@ -1,22 +1,24 @@
 # Registro de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
-
-O registro de Testes consiste em registrar e documentar todas as informações relevantes sobre os testes realizados, permitindo que a equipe de desenvolvimento e outras partes interessadas tenham acesso a informações importantes sobre o sistema testado.
-
-A importância de registrar os testes de software está relacionada à rastreabilidade e documentação completa do processo. Ao registrar cada teste realizado, é possível acompanhar o histórico de execução e identificar possíveis falhas ou problemas recorrentes. Além disso, a documentação adequada dos testes permite que os resultados sejam compartilhados e analisados por outras equipes, como desenvolvedores e gerentes de projeto.
-A documentação de testes de software pode ser facilitada pelo uso de ferramentas e técnicas específicas. Essas ferramentas e técnicas ajudam a tornar o processo de documentação mais eficiente, preciso e organizado. Nesta seção, exploraremos algumas das principais ferramentas e técnicas disponíveis para a documentação de testes de software:
-
-#Sistema de gerenciamento de testes                                                                                               
-#Captura de tela                                                                                                                 
-#Gravação de vídeo                                                                                                                  #Notas explicativas                                                                                                                     
-
-Ao utilizar essas ferramentas e técnicas de documentação de testes de software, a equipe pode garantir que todas as informações relevantes sejam registradas e documentadas de forma adequada. Isso facilita a rastreabilidade, a análise e a resolução de problemas durante o processo de desenvolvimento de software.
+Link do vídeo de evidência de testes:
+## Avaliação
 
 
+Os testes funcionais realizados no aplicativo são descritos a seguir:
+ 
+ <br>
+ 
+| **Caso de Teste** 	| **CT-01 – Logar na aplicação** 	|
+|:---:	|:---:	|
+|	Resultado de Teste 	| Teste realizado com sucesso no dia 21/04/2024. A feature está completa e funcional. |
+|	**Caso de Teste**	| **CT-02 – Inserir, atualizar e deletar usuários**	|
+|	Resultado de Teste 	| Teste realizado com sucesso no dia 21/04/2024. A feature está completa e foi testada inserindo, atualizando e deletando diferentes tipos de usuários com diferente informções . |
+|	**Caso de Teste**	| **CT-03 – Verificar dados de treino**	|
+|	Resultado de Teste 	|  Teste não realizado pela feature ainda estar em desenvolvimento.  |
+|	**Caso de Teste**	| **CT-04 – Editar treino**	|
+|	Resultado de Teste 	|  Teste realizado no dia 21/04/2024. A feature está com bug e ainda não se encontra funcional. Em desenvolvimento. |
+|	**Caso de Teste**	| **CT-05 – Consultar evolução treino**	|
+|	Resultado de Teste 	|  Teste não realizado pela feature ainda estar em desenvolvimento. |
 
 
-
-
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+ 
