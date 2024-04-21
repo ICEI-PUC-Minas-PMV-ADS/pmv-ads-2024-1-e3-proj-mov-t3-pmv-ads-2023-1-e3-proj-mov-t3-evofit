@@ -40,12 +40,15 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |RF-03| O aplicativo deve possibilitar a visualização detalhada de cada exercício, incluindo instruções e dicas de execução.  | Média |
 |RF-04| O aplicativo deve oferecer opções para os usuários personalizarem suas rotinas de treino de acordo com suas preferências.  | Média |
 |RF-05| O aplicativo deve possibilitar que os usuários salvem seus exercícios favoritos para fácil acesso posterior.  | Alta |
-|RF-06| O aplicativo deve permitir que os usuários compartilhem suas conquistas e progresso em redes sociais.| Média |
+|RF-06| O aplicativo deve permitir que os usuários compartilhem suas conquistas e progresso em redes sociais.| Baixa |
 |RF-07| O aplicativo deve oferecer uma seção para os usuários verificarem seus exercícios salvos. | Baixa |
-|RF-08| O aplicativo deve indicar a assiduidade aos treinos.   | Alta|
-|RF-09| O aplicativo deve fornecer vídeos demonstrativos dos exercícios   | Alta |
-|RF-10| O aplicativo deve gerar um relatório de evolução do usuário. | Alta |
-|RF-11| O aplicativo deve ser capaz de registrar fotografias da evolução física dos usuários.   | Média |
+|RF-08| O aplicativo deve registrar a assiduidade aos treinos.   | Alta|
+|RF-09| O aplicativo deve fornecer vídeos demonstrativos dos exercícios   | Média |
+|RF-10| O aplicativo deve permitir o registro de medidas do usuário | Alta |
+|RF-11| O aplicativo deve permitir o registro de peso (kg) do usuário | Alta | 
+|RF-12| O aplicativo deve calcular o IMC do usuário | Média | 
+|RF-13| O aplicativo deve gerar um relatório de evolução do usuário a partir das métricas fornecidas. | Alta |
+|RF-14| O aplicativo deve ser capaz de registrar fotografias da evolução física dos usuários.   | Média |
 
 ### Requisitos não Funcionais
 
