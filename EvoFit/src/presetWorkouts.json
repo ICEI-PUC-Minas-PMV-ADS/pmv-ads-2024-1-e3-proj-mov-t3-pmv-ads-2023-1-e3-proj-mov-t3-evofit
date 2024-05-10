@@ -1,0 +1,98 @@
+[
+  {
+    "objetivo": "Emagrecimento",
+    "treinos": [
+      {
+        "name": "Treino A",
+        "exercises": [
+          {"name": "Flexão de braço", "sets": "3", "reps": "15"},
+          {"name": "Rosca direta", "sets": "3", "reps": "12"},
+          {"name": "Agachamento", "sets": "3", "reps": "12"},
+          {"name": "Corrida leve", "sets": "1", "reps": "20 minutos"}
+        ]
+      },
+      {
+        "name": "Treino B",
+        "exercises": [
+          {"name": "Prancha", "sets": "3", "reps": "30 segundos"},
+          {"name": "Burpees", "sets": "3", "reps": "10"},
+          {"name": "Saltos", "sets": "3", "reps": "15"},
+          {"name": "Corrida moderada", "sets": "1", "reps": "25 minutos"}
+        ]
+      },
+      {
+        "name": "Treino C",
+        "exercises": [
+          {"name": "Abdominais", "sets": "4", "reps": "15"},
+          {"name": "Pular corda", "sets": "4", "reps": "30 segundos"},
+          {"name": "Step-ups", "sets": "4", "reps": "12 (cada perna)"},
+          {"name": "Corrida intensa", "sets": "1", "reps": "30 minutos"}
+        ]
+      }
+    ]
+  },
+  {
+    "objetivo": "Hipertrofia Muscular",
+    "treinos": [
+      {
+        "name": "Treino A",
+        "exercises": [
+          {"name": "Flexão de braço", "sets": "4", "reps": "12"},
+          {"name": "Elevação lateral", "sets": "4", "reps": "15"},
+          {"name": "Agachamento", "sets": "4", "reps": "12"},
+          {"name": "Corrida", "sets": "1", "reps": "20 minutos"}
+        ]
+      },
+      {
+        "name": "Treino B",
+        "exercises": [
+          {"name": "Supino inclinado", "sets": "4", "reps": "10"},
+          {"name": "Remada curvada", "sets": "4", "reps": "12"},
+          {"name": "Leg press", "sets": "4", "reps": "12"},
+          {"name": "Caminhada rápida inclinada", "sets": "1", "reps": "30 minutos"}
+        ]
+      },
+      {
+        "name": "Treino C",
+        "exercises": [
+          {"name": "Desenvolvimento militar", "sets": "3", "reps": "8"},
+          {"name": "Pull-up", "sets": "3", "reps": "10"},
+          {"name": "Levantamento terra", "sets": "3", "reps": "8-10"},
+          {"name": "Corrida moderada", "sets": "1", "reps": "25 minutos"}
+        ]
+      }
+    ]
+  },
+  {
+    "objetivo": "Definição Muscular",
+    "treinos": [
+      {
+        "name": "Treino A",
+        "exercises": [
+          {"name": "Supino reto", "sets": "4", "reps": "8-10"},
+          {"name": "Barra fixa", "sets": "4", "reps": "8-10"},
+          {"name": "Agachamento livre", "sets": "4", "reps": "8-10"},
+          {"name": "Escada", "sets": "1", "reps": "20 minutos"}
+        ]
+      },
+      {
+        "name": "Treino B",
+        "exercises": [
+          {"name": "Tríceps pulley", "sets": "4", "reps": "12"},
+          {"name": "Rosca concentrada", "sets": "4", "reps": "12"},
+          {"name": "Leg press 45°", "sets": "4", "reps": "12"},
+          {"name": "Corrida leve", "sets": "1", "reps": "20 minutos"}
+        ]
+      },
+      {
+        "name": "Treino C",
+        "exercises": [
+          {"name": "Flexão diamante", "sets": "3", "reps": "15"},
+          {"name": "Elevação frontal", "sets": "3", "reps": "12"},
+          {"name": "Cadeira extensora", "sets": "3", "reps": "12"},
+          {"name": "Caminhada rápida", "sets": "1", "reps": "30 minutos"}
+        ]
+      }
+    ]
+  }
+]

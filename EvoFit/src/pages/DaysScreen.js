@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { Appbar } from 'react-native-paper';
+import { collection, addDoc } from 'firebase/firestore'; // Importe as funções do Firestore
+import { db } from '../config/firebaseconfig'; // Importe db do arquivo de configuração
+import { auth } from '../config/firebaseconfig'; // Importe auth do arquivo de configuração
 
 export default function Days({ route }) {
     const { nome } = route.params;
@@ -24,17 +27,27 @@ export default function Days({ route }) {
         toggleDay(dia);
     };
 
-    const handleAdvance = () => {
-        
-        
-        navigation.navigate('Level', { nome, diasSelecionados });   
+    const handleAdvance = async () => {
+        try {
+            // Adicionar os dias selecionados à coleção "RegistroTreino" no Firestore
+            const registroTreinoRef = collection(db, 'RegistroTreino');
+            await addDoc(registroTreinoRef, {
+                usuario: nome, // Adiciona o nome do usuário
+                email: auth.currentUser.email, // Adiciona o email do usuário atualmente logado
+                diasTreino: diasSelecionados,
+                dataCriacao: new Date().toISOString() // Adicionando a data de criação do registro
+            });
+
+            navigation.navigate('Level', { nome, diasSelecionados });   
+        } catch (error) {
+            console.error('Erro ao adicionar registro de treino:', error);
+        }
     };
 
     return (
         <View style={styles.container}>
             <Appbar.Header style={styles.header}>
-                
-                <Appbar.Content title="Dias de Teino" titleStyle={styles.title} />
+                <Appbar.Content title="Dias de Treino" titleStyle={styles.title} />
                 {diasSelecionados.length > 0 && (
                     <Appbar.Action icon="arrow-right" onPress={handleAdvance} />
                 )}

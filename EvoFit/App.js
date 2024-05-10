@@ -7,6 +7,8 @@ import SignUpScreen from './src/pages/SignUpScreen';
 import HomeScreen from './src/pages/HomeScreen';
 import DaysScreen from './src/pages/DaysScreen'; 
 import LevelScreen from './src/pages/LevelScreen';
+import RecommendationsScreen from './src/pages/RecommendationsScreen';
+import WorkountCreateScreen from './src/pages/WorkountCreateScreen';
 
 const Stack = createStackNavigator();
 
@@ -38,10 +40,17 @@ function App() {
         <Stack.Screen 
           name="Level" 
           component={LevelScreen} 
-          options={{
-             
-            headerTitleAlign: 'center', 
-          }}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen 
+          name="Recommendations" 
+          component={RecommendationsScreen} 
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="WorkoutCreate"
+          component={WorkountCreateScreen}
+          options={{ header: () => null }}
         />
       </Stack.Navigator>
     </NavigationContainer>
