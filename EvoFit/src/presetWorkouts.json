@@ -1,0 +1,98 @@
+[
+  {
+    "objetivo": "Emagrecimento",
+    "treinos": [
+      {
+        "NameTreino": "Treino A",
+        "exercises": [
+          {"NamExercises": "Flexão de braço", "sets": "3", "reps": "15"},
+          {"NamExercises": "Rosca direta", "sets": "3", "reps": "12"},
+          {"NamExercises": "Agachamento", "sets": "3", "reps": "12"},
+          {"NamExercises": "Corrida leve", "sets": "1", "reps": "20 minutos"}
+        ]
+      },
+      {
+        "NameTreino": "Treino B",
+        "exercises": [
+          {"NamExercises": "Prancha", "sets": "3", "reps": "30 segundos"},
+          {"NamExercises": "Burpees", "sets": "3", "reps": "10"},
+          {"NamExercises": "Saltos", "sets": "3", "reps": "15"},
+          {"NamExercises": "Corrida moderada", "sets": "1", "reps": "25 minutos"}
+        ]
+      },
+      {
+        "NameTreino": "Treino C",
+        "exercises": [
+          {"NamExercises": "Abdominais", "sets": "4", "reps": "15"},
+          {"NamExercises": "Pular corda", "sets": "4", "reps": "30 segundos"},
+          {"NamExercises": "Step-ups", "sets": "4", "reps": "12 (cada perna)"},
+          {"NamExercises": "Corrida intensa", "sets": "1", "reps": "30 minutos"}
+        ]
+      }
+    ]
+  },
+  {
+    "objetivo": "Hipertrofia Muscular",
+    "treinos": [
+      {
+        "NameTreino": "Treino A",
+        "exercises": [
+          {"NamExercises": "Flexão de braço", "sets": "4", "reps": "12"},
+          {"NamExercises": "Elevação lateral", "sets": "4", "reps": "15"},
+          {"NamExercises": "Agachamento", "sets": "4", "reps": "12"},
+          {"NamExercises": "Corrida", "sets": "1", "reps": "20 minutos"}
+        ]
+      },
+      {
+        "NameTreino": "Treino B",
+        "exercises": [
+          {"NamExercises": "Supino inclinado", "sets": "4", "reps": "10"},
+          {"NamExercises": "Remada curvada", "sets": "4", "reps": "12"},
+          {"NamExercises": "Leg press", "sets": "4", "reps": "12"},
+          {"NamExercises": "Caminhada rápida inclinada", "sets": "1", "reps": "30 minutos"}
+        ]
+      },
+      {
+        "NameTreino": "Treino C",
+        "exercises": [
+          {"NamExercises": "Desenvolvimento militar", "sets": "3", "reps": "8"},
+          {"NamExercises": "Pull-up", "sets": "3", "reps": "10"},
+          {"NamExercises": "Levantamento terra", "sets": "3", "reps": "8-10"},
+          {"NamExercises": "Corrida moderada", "sets": "1", "reps": "25 minutos"}
+        ]
+      }
+    ]
+  },
+  {
+    "objetivo": "Definição Muscular",
+    "treinos": [
+      {
+        "NameTreino": "Treino A",
+        "exercises": [
+          {"NamExercises": "Supino reto", "sets": "4", "reps": "8-10"},
+          {"NamExercises": "Barra fixa", "sets": "4", "reps": "8-10"},
+          {"NamExercises": "Agachamento livre", "sets": "4", "reps": "8-10"},
+          {"NamExercises": "Escada", "sets": "1", "reps": "20 minutos"}
+        ]
+      },
+      {
+        "NameTreino": "Treino B",
+        "exercises": [
+          {"NamExercises": "Tríceps pulley", "sets": "4", "reps": "12"},
+          {"NamExercises": "Rosca concentrada", "sets": "4", "reps": "12"},
+          {"NamExercises": "Leg press 45°", "sets": "4", "reps": "12"},
+          {"NamExercises": "Corrida leve", "sets": "1", "reps": "20 minutos"}
+        ]
+      },
+      {
+        "NameTreino": "Treino C",
+        "exercises": [
+          {"NamExercises": "Flexão diamante", "sets": "3", "reps": "15"},
+          {"NamExercises": "Elevação frontal", "sets": "3", "reps": "12"},
+          {"NamExercises": "Cadeira extensora", "sets": "3", "reps": "12"},
+          {"NamExercises": "Caminhada rápida", "sets": "1", "reps": "30 minutos"}
+        ]
+      }
+    ]
+  }
+]
