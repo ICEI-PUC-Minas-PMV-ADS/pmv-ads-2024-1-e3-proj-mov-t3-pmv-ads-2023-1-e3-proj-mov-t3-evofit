@@ -59,15 +59,19 @@ export default function Home({ route }) {
 
   const fetchTrainingDays = async () => {
     try {
-      const querySnapshot = await getDocs(collection(db, "DiasTreino"));
-      let trainingDays = [];
-      querySnapshot.forEach((doc) => {
-        if (doc.exists()) {
-          trainingDays = doc.data().diasTreino;
-        }
-      });
-      markTrainingDays(trainingDays);
-      checkTodayIsTrainingDay(trainingDays);
+      const user = auth.currentUser;
+      const userId = user.uid;
+
+      const userDocRef = doc(db, 'DiasTreino', userId);
+      const userDoc = await getDoc(userDocRef);
+
+      if (userDoc.exists()) {
+        const trainingDays = userDoc.data().diasTreino || [];
+        markTrainingDays(trainingDays);
+        checkTodayIsTrainingDay(trainingDays);
+      } else {
+        console.log("Documento de dias de treino não encontrado");
+      }
     } catch (error) {
       console.log("Erro ao buscar dados do Firestore: ", error);
     }
@@ -77,19 +81,18 @@ export default function Home({ route }) {
     const newMarkedDates = {};
     const today = new Date();
     const currentYear = today.getFullYear();
-    const currentMonth = today.getMonth() + 1; // Janeiro é 0
 
-    for (let month = 1; month <= 12; month++) {
-      const daysInMonth = new Date(currentYear, month, 0).getDate();
+    for (let month = 0; month < 12; month++) {
+      const daysInMonth = new Date(currentYear, month + 1, 0).getDate();
       for (let day = 1; day <= daysInMonth; day++) {
-        const date = new Date(currentYear, month - 1, day);
+        const date = new Date(currentYear, month, day);
         const dayOfWeek = date.getDay(); // 0 = Domingo, 1 = Segunda, etc.
         const dateString = date.toISOString().split('T')[0];
 
         if (trainingDays.includes(dayOfWeek)) {
-          newMarkedDates[dateString] = { marked: true, dotColor: '#ffA500' };
-        } else if (dayOfWeek === 0 || dayOfWeek === 6) {
-          newMarkedDates[dateString] = { marked: true, dotColor: '#c0c0c0' };
+          newMarkedDates[dateString] = { marked: true, dotColor: '#ffA500' }; // Dias de treino
+        } else {
+          newMarkedDates[dateString] = { marked: true, dotColor: '#c0c0c0' }; // Dias de folga
         }
       }
     }
@@ -108,7 +111,7 @@ export default function Home({ route }) {
     }
   };
 
-  const fetchLastTraining = async (userData) => {
+  const fetchLastTraining = (userData) => {
     try {
       const lastTrainingName = userData.NomeTreinoRealizado;
       setLastTraining(lastTrainingName ? lastTrainingName : 'Nenhum treino realizado recentemente');

@@ -16,25 +16,31 @@ export default function Workout() {
 
     const fetchWorkouts = async () => {
         try {
-            const q = query(collection(db, 'Treino'));
-            const querySnapshot = await getDocs(q);
-
-            const workoutsData = [];
-
-            querySnapshot.forEach(docSnap => {
+            const user = auth.currentUser;
+            if (!user) {
+                throw new Error("Usuário não está autenticado");
+            }
+            const userUid = user.uid;
+    
+            // Consulta para buscar o documento específico do usuário
+            const docRef = doc(db, 'Treino', userUid);
+            const docSnap = await getDoc(docRef);
+    
+            if (docSnap.exists()) {
                 const workoutData = docSnap.data();
                 const treinos = workoutData.treinos || [];
-
-                treinos.forEach(treino => {
-                    workoutsData.push({
-                        id: docSnap.id,
-                        objetivo: workoutData.objetivo || '',
-                        treino: treino
-                    });
-                });
-            });
-
-            setWorkouts(workoutsData);
+    
+                const workoutsData = treinos.map(treino => ({
+                    id: docSnap.id,
+                    objetivo: workoutData.objetivo || '',
+                    treino: treino
+                }));
+    
+                setWorkouts(workoutsData);
+            } else {
+                console.log('Nenhum documento encontrado');
+            }
+    
             setLoading(false);
         } catch (error) {
             console.error('Erro ao buscar treinos:', error);
@@ -42,6 +48,7 @@ export default function Workout() {
             setLoading(false);
         }
     };
+    
 
     useEffect(() => {
         fetchWorkouts();
@@ -72,22 +79,22 @@ export default function Workout() {
 
     const handleFinishWorkout = async () => {
         const today = new Date().toISOString().split('T')[0];
-
+    
         try {
             const user = auth.currentUser;
             if (!user) {
                 throw new Error("Usuário não está autenticado");
             }
-
+    
             const userUid = user.uid;
             console.log("UID do usuário:", userUid);
-
-            // Referência para a coleção RegistroTreino
-            const registroTreinoRef = doc(collection(db, "RegistroTreino", userUid), userUid);
-
+    
+            // Referência para o documento do usuário na coleção RegistroTreino
+            const registroTreinoRef = doc(db, "RegistroTreino", userUid);
+    
             // Verifique se o documento do usuário já existe
             const docSnap = await getDoc(registroTreinoRef);
-
+    
             if (docSnap.exists()) {
                 // Atualize o documento existente adicionando a nova data ao array
                 await updateDoc(registroTreinoRef, {
@@ -101,12 +108,12 @@ export default function Workout() {
                     NomeTreinoRealizado: selectedWorkout ? `Treino ${String.fromCharCode(65 + workouts.indexOf(selectedWorkout))}` : '',
                 });
             }
-
+    
             console.log("Documento atualizado/criado com sucesso");
         } catch (error) {
             console.error("Erro ao atualizar/ criar registro de treino:", error);
         }
-
+    
         setModalVisible(false);
         navigation.navigate('Início', { screen: 'Gestão de Treinos' });
     };

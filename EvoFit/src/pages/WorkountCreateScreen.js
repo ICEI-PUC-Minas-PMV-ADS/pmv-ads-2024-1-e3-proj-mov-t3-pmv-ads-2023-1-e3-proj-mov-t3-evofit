@@ -193,8 +193,11 @@ export default function WorkoutCreate({ route }) {
                                         </View>
                                     </View>
                                 ))}
-                                <TouchableOpacity style={styles.addButton} onPress={() => handleAddExercise(index)}>
-                                    <Text style={styles.addButtonText}>Adicionar Exercício</Text>
+                                <TouchableOpacity onPress={() => handleAddExercise(index)}>
+                                <Image
+                                source={require('../assets/sinal-de-adicao.png')}
+                                style={{ width: 24, height: 24 }}
+                            />
                                 </TouchableOpacity>
                             </View>
                         )}
@@ -244,7 +247,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     addButton: {
-        backgroundColor: '#007bff',
+        backgroundColor: '#780202',
         paddingVertical: 15,
         borderRadius: 5,
         marginBottom: 10,
@@ -255,7 +258,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     saveButton: {
-        backgroundColor: '#28a745',
+        backgroundColor: '#780202',
         paddingVertical: 15,
         borderRadius: 5,
         marginBottom: 10,
