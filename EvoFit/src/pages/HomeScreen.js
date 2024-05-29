@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { Calendar } from 'react-native-calendars';
 import { LocaleConfig } from 'react-native-calendars';
-import { getDoc, getDocs, collection, doc } from 'firebase/firestore';
+import { getDoc, doc } from 'firebase/firestore';
 import { db, auth } from '../config/firebaseconfig';
-import { differenceInHours, startOfMonth, endOfMonth, eachDayOfInterval } from 'date-fns';
-import { useNavigation } from '@react-navigation/native';
+import { startOfMonth, endOfMonth, eachDayOfInterval, addDays } from 'date-fns';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 
 // Configuração do idioma para português
 LocaleConfig.locales['pt-br'] = {
@@ -18,14 +18,43 @@ LocaleConfig.defaultLocale = 'pt-br';
 
 export default function Home({ route }) {
   const [markedDates, setMarkedDates] = useState({});
-  const [hoursRemaining, setHoursRemaining] = useState(null);
+  const [timeLeft, setTimeLeft] = useState("");
   const [lastTraining, setLastTraining] = useState('Nenhum treino realizado recentemente');
   const [trainingFrequency, setTrainingFrequency] = useState(0);
   const navigation = useNavigation();
 
+  useFocusEffect(
+    useCallback(() => {
+      fetchTrainingDays();
+      fetchTrainingRecords();
+    }, [])
+  );
+
   useEffect(() => {
-    fetchTrainingDays();
-    fetchTrainingRecords();
+    const timerFunction = () => {
+      let now = Date.now();
+      let endToday = new Date();
+      endToday.setHours(23);
+      endToday.setMinutes(59);
+      endToday.setSeconds(59);
+      endToday = endToday.getTime();
+      let diff = endToday - now;
+
+      let h = Math.floor(diff / (1000 * 60 * 60));
+      let m = Math.floor((diff / (1000 * 60)) - (h * 60));
+      let s = Math.floor((diff / 1000) - (m * 60) - ((h * 60) * 60));
+
+      h = h < 10 ? '0' + h : h;
+      m = m < 10 ? '0' + m : m;
+      s = s < 10 ? '0' + s : s;
+
+      setTimeLeft(`${h}h ${m}m ${s}s`);
+    };
+
+    let timer = setInterval(timerFunction, 1000);
+    timerFunction();
+
+    return () => clearInterval(timer);
   }, []);
 
   const fetchTrainingRecords = async () => {
@@ -48,7 +77,7 @@ export default function Home({ route }) {
         setMarkedDates(prevDates => ({ ...prevDates, ...newMarkedDates }));
         fetchLastTraining(userData);
         calculateTrainingFrequency(trainingDays);
-        checkTodayIsTrainingDay(trainingDays);
+        checkNextTrainingDay(userData, trainingDays);
       } else {
         console.log("Documento do usuário não encontrado");
       }
@@ -68,7 +97,7 @@ export default function Home({ route }) {
       if (userDoc.exists()) {
         const trainingDays = userDoc.data().diasTreino || [];
         markTrainingDays(trainingDays);
-        checkTodayIsTrainingDay(trainingDays);
+        checkNextTrainingDay(null, trainingDays);
       } else {
         console.log("Documento de dias de treino não encontrado");
       }
@@ -86,28 +115,69 @@ export default function Home({ route }) {
       const daysInMonth = new Date(currentYear, month + 1, 0).getDate();
       for (let day = 1; day <= daysInMonth; day++) {
         const date = new Date(currentYear, month, day);
-        const dayOfWeek = date.getDay(); // 0 = Domingo, 1 = Segunda, etc.
+        const dayOfWeek = date.getDay(); // 0 = Sunday, 1 = Monday, etc.
         const dateString = date.toISOString().split('T')[0];
 
         if (trainingDays.includes(dayOfWeek)) {
-          newMarkedDates[dateString] = { marked: true, dotColor: '#ffA500' }; // Dias de treino
+          newMarkedDates[dateString] = { marked: true, dotColor: '#ffA500' }; // Training days
         } else {
-          newMarkedDates[dateString] = { marked: true, dotColor: '#c0c0c0' }; // Dias de folga
+          newMarkedDates[dateString] = { marked: true, dotColor: '#c0c0c0' }; // Off days
         }
       }
     }
     setMarkedDates(prevDates => ({ ...prevDates, ...newMarkedDates }));
   };
 
-  const checkTodayIsTrainingDay = (trainingDays) => {
+  const checkNextTrainingDay = (userData, trainingDays) => {
     const today = new Date();
-    const dayOfWeek = today.getDay();
-    if (trainingDays.includes(dayOfWeek)) {
-      const now = new Date();
-      const endOfDay = new Date();
-      endOfDay.setHours(23, 59, 59, 999); // Define o horário final do dia como 23:59:59:999
-      const remainingHours = differenceInHours(endOfDay, now);
-      setHoursRemaining(remainingHours);
+
+    // Verifica se hoje é um dia de treino
+    if (markedDates[today.toISOString().split('T')[0]]?.dotColor === '#ffA500') {
+      let nextTrainingDay = null;
+
+      if (userData) {
+        const lastTrainingDay = userData.DiaTreinado?.slice(-1)[0];
+        const lastTrainingDate = lastTrainingDay ? new Date(lastTrainingDay) : null;
+
+        if (lastTrainingDate) {
+          for (let i = 1; i <= 7; i++) {
+            const checkDay = addDays(lastTrainingDate, i).getDay();
+            if (trainingDays.includes(checkDay)) {
+              nextTrainingDay = addDays(lastTrainingDate, i);
+              break;
+            }
+          }
+        }
+      }
+
+      if (!nextTrainingDay) {
+        for (let i = 1; i <= 7; i++) {
+          const checkDay = addDays(today, i).getDay(); // Verifica a partir de hoje
+          if (trainingDays.includes(checkDay)) {
+            nextTrainingDay = addDays(today, i);
+            break;
+          }
+        }
+      }
+
+      if (nextTrainingDay) {
+        const now = new Date();
+
+        if (nextTrainingDay.toDateString() === today.toDateString()) {
+          // Se hoje é um dia de treino, calcular as horas restantes até o final do dia
+          const endOfDay = new Date(today);
+          endOfDay.setHours(23, 59, 59, 999); // Define o final do dia de hoje
+          const remainingMillis = endOfDay.getTime() - now.getTime();
+          setTimeRemaining(getTimeComponents(remainingMillis));
+        } else {
+          // Calcula a diferença em milissegundos
+          const differenceInMillis = nextTrainingDay.getTime() - now.getTime();
+          setTimeRemaining(getTimeComponents(differenceInMillis));
+        }
+      }
+    } else {
+      // Se hoje não for um dia de treino, exibe 0 horas restantes
+      setTimeRemaining({ total: 0, days: 0, hours: 0, minutes: 0, seconds: 0 });
     }
   };
 
@@ -157,6 +227,19 @@ export default function Home({ route }) {
     }
   };
 
+  const getTimeComponents = (millis) => {
+    const totalSeconds = Math.floor(millis / 1000);
+    const totalMinutes = Math.floor(totalSeconds / 60);
+    const totalHours = Math.floor(totalMinutes / 60);
+    const days = Math.floor(totalHours / 24);
+
+    const hours = totalHours % 24;
+    const minutes = totalMinutes % 60;
+    const seconds = totalSeconds % 60;
+
+    return { total: millis, days, hours, minutes, seconds };
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.calendarContainer}>
@@ -183,27 +266,62 @@ export default function Home({ route }) {
           <Text style={styles.lastTrainingTitle}>Último Treino</Text>
           <Text style={styles.lastTrainingText}>{lastTraining}</Text>
         </View>
-        {hoursRemaining !== null && hoursRemaining >= 0 ? (
-          <View style={styles.notificationContainer}>
-            <View style={styles.notificationContent}>
-              <View style={styles.notificationBox}>
-                <Text style={styles.notificationTitle}>Hoje você tem treino!</Text>
-                <Text style={styles.notificationText}>Faltam {hoursRemaining} horas para você treinar</Text>
-                <TouchableOpacity style={styles.trainButton} onPress={() => navigation.navigate('Treinar', route.params)}>
-                  <Text style={styles.trainButtonText}>Treinar</Text>
-                </TouchableOpacity>
-              </View>
-            </View>
-          </View>
-        ) : (
+        {markedDates[new Date().toISOString().split('T')[0]]?.dotColor === '#c0c0c0' ? (
           <View style={styles.notificationContainer}>
             <View style={styles.notificationContent}>
               <View style={styles.notificationBox}>
                 <Text style={styles.notificationTitle}>Hoje é seu dia de descanso!</Text>
                 <Text style={styles.notificationText}>Renove sua energia</Text>
+                {timeLeft !== "" ? (
+                  <Text style={styles.notificationText}>Faltam {timeLeft} para o próximo treino</Text>
+                ) : null}
               </View>
             </View>
           </View>
+        ) : (
+          <>
+            {markedDates[new Date().toISOString().split('T')[0]]?.dotColor === 'green' ? (
+              <View style={styles.notificationContainer}>
+                <View style={styles.notificationContent}>
+                  <View style={styles.notificationBox}>
+                    <Text style={styles.notificationTitle}>Parabéns! Hoje você treinou</Text>
+                    <Text style={styles.notificationText}>Renove sua energia</Text>
+                    {timeLeft !== "" ? (
+                      <Text style={styles.notificationText}>Faltam {timeLeft} para o próximo treino</Text>
+                    ) : null}
+                  </View>
+                </View>
+              </View>
+            ) : (
+              <>
+                {timeLeft !== "" ? (
+                  <View style={styles.notificationContainer}>
+                    <View style={styles.notificationContent}>
+                      <View style={styles.notificationBox}>
+                        <Text style={styles.notificationTitle}>Hoje você tem treino!</Text>
+                        <Text style={styles.notificationText}>Faltam {timeLeft} para você treinar</Text>
+                        <TouchableOpacity style={styles.trainButton} onPress={() => navigation.navigate('Treinar', route.params)}>
+                          <Text style={styles.trainButtonText}>Treinar</Text>
+                        </TouchableOpacity>
+                      </View>
+                    </View>
+                  </View>
+                ) : (
+                  <View style={styles.notificationContainer}>
+                    <View style={styles.notificationContent}>
+                      <View style={styles.notificationBox}>
+                        <Text style={styles.notificationTitle}>Hoje é seu dia de descanso!</Text>
+                        <Text style={styles.notificationText}>Renove sua energia</Text>
+                        {timeLeft !== "" ? (
+                          <Text style={styles.notificationText}>Faltam {timeLeft} para o próximo treino</Text>
+                        ) : null}
+                      </View>
+                    </View>
+                  </View>
+                )}
+              </>
+            )}
+          </>
         )}
       </View>
       <View style={styles.scoreContainer}>
