@@ -23,7 +23,8 @@ EvoFit é uma aplicação móvel para auxiliar e monitorar a evolução dos usu�
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, complementaremos com as instruções de utilização. (Descreva como instalar eventuais dependências e como executar a aplicação.)
+Instruções mais apresentação:
+https://www.youtube.com/watch?v=6gTO4ESdMTI
 
 # Documentação
 
